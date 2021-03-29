@@ -1,13 +1,10 @@
 // a
-const category = document.querySelector('#categories');
-const item = category.children;
-console.log(`В списке ${item.length} категории.`);
+const item = document.querySelector('#categories');
+const newEl = document.querySelectorAll('li.item');
 
-// b
-const animal = document.querySelector('h2');
-console.log(`Категория: ${animal.textContent}`);
+console.log(`В списке ${newEl.length} категории.`);
 
-// c
-const newCategory = animal.nextElementSibling;
-const allCategory = newCategory.children
-console.log(`Количество элементов:${allCategory.length}`)
+newEl.forEach(el => {
+    console.log(el.querySelector('h2').textContent);
+    console.log(el.querySelectorAll('li').length);
+})
